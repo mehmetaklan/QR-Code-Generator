@@ -1,0 +1,108 @@
+/*Variables*/
+$w40:40%;
+$w-h-100:100%;
+$h80:80%;
+$h50:50%;
+$w25:25%;
+$cont-bg:#4200a2;
+$input-bg:#a7a7a7;
+$clr-white:#DDDDDD;
+// $body-bg
+$br-rd-10:10px;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap');
+/*Reset Css*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+html,body{
+    height: $w-h-100;
+}
+body{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    background-color: $cont-bg;
+    gap: 10px;
+}
+@mixin container(){
+    width: $w25;
+    height: $h80;
+    background-color: #D8E9F0;
+    display: flex;
+    flex-direction: column;
+    border-radius: $br-rd-10;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 4px 4px 4px #000;
+}
+
+h1{
+    color: $clr-white;
+}
+.container{
+    @include container();
+    @media screen and (max-width:1024px) {
+        width: 80%;
+        height: 80%;
+    }
+    figure{
+        width: $w-h-100;
+        height: $h50;
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 5px solid black;
+        border-radius: 10px;   
+    }
+    
+    fieldset{
+        width: $w-h-100;
+        height: $h50;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+    }
+    .generate_site{
+        width: 80%;
+        padding: 15px;
+        background-color: $input-bg;
+        border-radius: 5px;
+        color:$clr-white;
+        font-size: 18px;
+        font-weight: 400;
+        &::placeholder{
+            color:#fff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+        }  
+    }
+    .generate_btn{
+        appearance: none;
+        width: 50%;
+        height: 40px;
+        border-radius: 5px;
+        background: #01A7A3;
+        cursor: pointer;
+        transition: all 0.5s;
+        font-weight: 700;
+        color: white;
+        
+        &:hover{
+            background-color: #F0A500;
+        }   
+    }
+}
+footer{
+    font-size: 10px;
+    color: $clr-white;
+}

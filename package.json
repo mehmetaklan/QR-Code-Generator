@@ -1,0 +1,19 @@
+{
+  "name": "qrcodegenerator",
+  "version": "1.0.0",
+  "description": "Qr Code Generator",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "keywords": [
+    "qr",
+    "qrcode",
+    "software"
+  ],
+  "author": "Mehmet Aklanoglu",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^8.0.0"
+  }
+}
